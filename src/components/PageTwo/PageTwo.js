@@ -6,7 +6,7 @@ class PageTwo extends Component {
 
     nextPage = () => {
         console.log('check');
-        alert('Awesome order, lets get your info!');
+
         // this will happen this weekend
         this.props.history.push('/PageThree');
     }
@@ -14,6 +14,7 @@ class PageTwo extends Component {
     render(){ 
         return(
             <>
+            <h2>How well are you understanding the content?</h2>
                 <ul>
                     {/* {this.props.reduxState.pizzaMenu.map((item) => { */}
                         {/* return <li key={item.id}><MenuItem item={item} /> </li>

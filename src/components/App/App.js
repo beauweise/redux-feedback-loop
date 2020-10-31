@@ -1,9 +1,14 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import './App.css';
-// import {HashRouter as Router, Route} from 'react-router-dom';
+import {HashRouter as Router, Route} from 'react-router-dom';
 import { connect } from 'react-redux';
 import PageOne from '../PageOne/PageOne';
+import PageTwo from '../PageTwo/PageTwo';
+import PageThree from '../PageThree/PageThree';
+import PageFour from '../PageFour/PageFour';
+import ReviewFeedback from '../ReviewFeedback/ReviewFeedback'
+
 
 
 class App extends Component {
@@ -20,6 +25,7 @@ class App extends Component {
           <Route exact path="/PageTwo" component={PageTwo} />
           <Route exact path="/PageThree" component={PageThree} />
           <Route exact path="/PageFour" component={PageFour} />
+          <Route exact path="/ReviewFeedback" component={ReviewFeedback}/>
         </div>
       </Router>
     );

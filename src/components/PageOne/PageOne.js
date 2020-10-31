@@ -6,19 +6,21 @@ class PageOne extends Component {
 
     nextPage = () => {
         console.log('check');
-        alert('Awesome order, lets get your info!');
         // this will happen this weekend
         this.props.history.push('/PageTwo');
+    }
+    handleChange = ()=>{
+        console.log('input page 1');
+        
     }
 
     render(){ 
         return(
             <>
-                <ul>
-                    {/* {this.props.reduxState.pizzaMenu.map((item) => { */}
-                        {/* return <li key={item.id}><MenuItem item={item} /> </li>
-                    })}  */}
-                </ul>
+            <h2>How are you feeling today?</h2>
+            <form >
+                <input type="number" onChange={(event) => this.handleChange(event, "customer_name")} placeholder="1-10"/>
+            </form>
                 <button onClick={this.nextPage}>Next</button>
             </>
         )
