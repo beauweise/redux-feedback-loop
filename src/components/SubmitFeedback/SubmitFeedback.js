@@ -11,7 +11,7 @@ state = {
     nextPage = () => {
         console.log('check');
         // this will happen this weekend
-        this.props.history.push('/PageOne');
+        this.props.history.push('/');
         
 
     }
@@ -22,9 +22,9 @@ state = {
     render(){ 
         return(
             <>
-            <h2>How are you feeling today?</h2>
+            <h2>Thank you!</h2>
             <form >
-                 <button onClick={this.nextPage}>Next</button>
+                 <button onClick={this.nextPage}>Leave New Feedback</button>
             </form>
                
             </>

@@ -16,10 +16,10 @@ class ReviewFeedback extends Component {
 
 
     nextPage = () => {
-        console.log('check');
-
-        // this will happen this weekend
+        console.log('review Feedback');
         this.props.history.push('/SubmitFeedback');
+    }
+
     handleSubmit = () => {
         console.log('handle Submit Feedback');
         

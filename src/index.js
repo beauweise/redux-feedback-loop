@@ -50,8 +50,13 @@ const pageFourReducer = (state=[], action) => {
       }
 }
 const reviewReducer = (state =[], action)=>{
-    console.log(state);
-
+    console.log(action.payload);
+    switch(action.type){
+        case 'SET_PAGEFOUR':
+          return action.payload;
+        default:
+          return state;
+      }
     
 }
 
