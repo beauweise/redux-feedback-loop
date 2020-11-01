@@ -13,11 +13,16 @@ class ReviewFeedback extends Component {
         return(
             <>
             <h2>Review your Feedback</h2>
-                <p></p>
-                <form onSubmit = {this.handleSubmit}>
-                    
-                </form>
-                <button onClick={this.nextPage}>Next</button>
+                <ul className = 'ReviewFeedback'>
+                    <li>{this.props.reduxState.pageOneReducer}</li>
+                    <li>{this.props.reduxState.pageTwoReducer}</li>
+                    <li>{this.props.reduxState.pageThreeReducer}</li>
+                    <li>{this.props.reduxState.pageFourReducer}</li>
+                </ul>
+
+                
+                
+                <button onClick={this.nextPage}>Submit</button>
             </>
         )
     }

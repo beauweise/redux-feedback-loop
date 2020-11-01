@@ -10,6 +10,8 @@ import logger from 'redux-logger';
 
 
 const pageOneReducer = (state=[], action) => {
+    console.log(action.payload);
+    
     switch(action.type){
         case 'SET_PAGEONE':
           return action.payload;
@@ -18,6 +20,8 @@ const pageOneReducer = (state=[], action) => {
       }
 }
 const pageTwoReducer = (state=[], action) => {
+    console.log(action.payload);
+
     switch(action.type){
         case 'SET_PAGETWO':
           return action.payload;
@@ -26,6 +30,8 @@ const pageTwoReducer = (state=[], action) => {
       }
 }
 const pageThreeReducer = (state=[], action) => {
+    console.log(action.payload);
+
     switch(action.type){
         case 'SET_PAGETHREE':
           return action.payload;
@@ -34,12 +40,19 @@ const pageThreeReducer = (state=[], action) => {
       }
 }
 const pageFourReducer = (state=[], action) => {
+    console.log(action.payload);
+
     switch(action.type){
         case 'SET_PAGEFOUR':
           return action.payload;
         default:
           return state;
       }
+}
+const reviewReducer = (state =[], action)=>{
+    console.log(state);
+    
+    
 }
 
 
