@@ -50,9 +50,9 @@ const pageFourReducer = (state=[], action) => {
       }
 }
 const reviewReducer = (state =[], action)=>{
-    console.log(action.payload);
+    console.log(action.payload,state);
     switch(action.type){
-        case 'SET_PAGEFOUR':
+        case 'SET_FEEDBACK':
           return action.payload;
         default:
           return state;
