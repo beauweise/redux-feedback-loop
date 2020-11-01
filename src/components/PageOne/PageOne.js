@@ -5,14 +5,14 @@ import '../App/App.css';
 class PageOne extends Component {
 
 state = {
-    pageOne: ''
+    feeling: ''
   };
 
     nextPage = () => {
         console.log('check');
         // this will happen this weekend
         this.props.history.push('/PageTwo');
-        this.props.dispatch({type: 'SET_PAGEONE', payload: this.state.pageOne});
+        this.props.dispatch({type: 'SET_FEELING', payload: this.state.feeling});
 
     }
 
@@ -20,7 +20,7 @@ state = {
         console.log('input page 1');
 
         this.setState({
-            pageOne: event.target.value,
+            feeling: event.target.value,
           });
         }
     

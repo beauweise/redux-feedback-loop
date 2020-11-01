@@ -9,66 +9,65 @@ import logger from 'redux-logger';
 
 
 
-const pageOneReducer = (state=0, action) => {
+const feelingReducer = (state=0, action) => {
     console.log(action.payload);
     
     switch(action.type){
-        case 'SET_PAGEONE':
+        case 'SET_FEELING':
           return action.payload;
         default:
           return state;
       }
 }
-const pageTwoReducer = (state=[], action) => {
+const understandingReducer = (state=[], action) => {
     console.log(action.payload);
 
     switch(action.type){
-        case 'SET_PAGETWO':
+        case 'SET_UNDERSTANDING':
           return action.payload;
         default:
           return state;
       }
 }
-const pageThreeReducer = (state=[], action) => {
+const supportReducer = (state=[], action) => {
     console.log(action.payload);
 
     switch(action.type){
-        case 'SET_PAGETHREE':
+        case 'SET_SUPPORT':
           return action.payload;
         default:
           return state;
       }
 }
-const pageFourReducer = (state=[], action) => {
+const commentsReducer = (state=[], action) => {
     console.log(action.payload);
 
     switch(action.type){
-        case 'SET_PAGEFOUR':
+        case 'SET_COMMENTS':
           return action.payload;
         default:
           return state;
       }
 }
-const reviewReducer = (state =[], action)=>{
-    console.log(action.payload,state);
-    switch(action.type){
-        case 'SET_FEEDBACK':
-          return action.payload;
-        default:
-          return state;
-      }
+// const reviewReducer = (state =[], action)=>{
+//     console.log(action.payload,state);
+//     switch(action.type){
+//         case 'SET_FEEDBACK':
+//           return action.payload;
+//         default:
+//           return state;
+//       }
     
-}
+// }
 
 
 
 const storeInstance = createStore(
     combineReducers({
-       pageOneReducer,
-       pageTwoReducer,
-       pageThreeReducer,
-       pageFourReducer,
-       reviewReducer
+        feelingReducer,
+        understandingReducer,
+        supportReducer,
+        commentsReducer,
     }),
   applyMiddleware(logger)
 

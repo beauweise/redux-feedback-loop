@@ -4,20 +4,20 @@ import '../App/App.css';
 
 class PageFour extends Component {
     state = {
-        pageFour: ''
+        comments: ''
       };
     nextPage = () => {
         console.log('check');
 
         // this will happen this weekend
         this.props.history.push('/ReviewFeedback');
-        this.props.dispatch({type: 'SET_PAGEFOUR', payload: this.state.pageFour});
+        this.props.dispatch({type: 'SET_COMMENTS', payload: this.state.comments});
 
     }
     handleChange = (event)=>{
         console.log('input page 4');
         this.setState({
-            pageFour: event.target.value,
+            comments: event.target.value,
           });
     }
 

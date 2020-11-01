@@ -4,28 +4,19 @@ import '../App/App.css';
 
 class PageOne extends Component {
 
-state = {
-    pageOne: ''
-  };
-
     nextPage = () => {
         console.log('check');
         // this will happen this weekend
         this.props.history.push('/');
-        
-
     }
-
-   
-    
 
     render(){ 
         return(
             <>
             <h2>Thank you!</h2>
-            <form >
+            <div>
                  <button onClick={this.nextPage}>Leave New Feedback</button>
-            </form>
+            </div>
                
             </>
         )

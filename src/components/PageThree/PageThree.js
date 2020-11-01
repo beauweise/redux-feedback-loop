@@ -5,20 +5,20 @@ import '../App/App.css';
 class PageThree extends Component {
 
     state = {
-        pageThree: ''
+        support: ''
     };
     nextPage = () => {
         console.log('check');
 
         // this will happen this weekend
         this.props.history.push('/PageFour');
-        this.props.dispatch({ type: 'SET_PAGETHREE', payload: this.state.pageThree});
+        this.props.dispatch({ type: 'SET_SUPPORT', payload: this.state.support});
 
     }
     handleChange = (event)=>{
         console.log('input page 3');
         this.setState({
-            pageThree: event.target.value,
+            support: event.target.value,
         });
     }
 

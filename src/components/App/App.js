@@ -8,7 +8,7 @@ import PageTwo from '../PageTwo/PageTwo';
 import PageThree from '../PageThree/PageThree';
 import PageFour from '../PageFour/PageFour';
 import ReviewFeedback from '../ReviewFeedback/ReviewFeedback';
-import SubmitFeedback from '../SubmitFeedback/SubmitFeedback';
+import LeaveNewFeedback from '../LeaveNewFeedback/LeaveNewFeedback';
 
 
 
@@ -27,7 +27,7 @@ class App extends Component {
           <Route exact path="/PageThree" component={PageThree} />
           <Route exact path="/PageFour" component={PageFour} />
           <Route exact path="/ReviewFeedback" component={ReviewFeedback}/>
-          <Route exact path="/SubmitFeedback" component ={SubmitFeedback}/>
+          <Route exact path="/LeaveNewFeedBack" component ={LeaveNewFeedback}/>
         </div>
       </Router>
     );

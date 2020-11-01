@@ -4,7 +4,7 @@ import '../App/App.css';
 
 class PageTwo extends Component {
     state = {
-        pageTwo: ''
+        understanding: ''
     };
 
     nextPage = () => {
@@ -12,14 +12,14 @@ class PageTwo extends Component {
 
         // this will happen this weekend
         this.props.history.push('/PageThree');
-        this.props.dispatch({ type: 'SET_PAGETWO', payload: this.state.pageTwo});
+        this.props.dispatch({ type: 'SET_UNDERSTANDING', payload: this.state.understanding});
     }
 
     handleChange = (event) => {
         console.log('input page 2');
 
         this.setState({
-            pageTwo: event.target.value,
+            understanding: event.target.value,
         });
     }
 
