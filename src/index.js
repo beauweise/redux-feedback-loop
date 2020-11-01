@@ -9,7 +9,7 @@ import logger from 'redux-logger';
 
 
 
-const pageOneReducer = (state=[], action) => {
+const pageOneReducer = (state=0, action) => {
     console.log(action.payload);
     
     switch(action.type){
@@ -51,7 +51,7 @@ const pageFourReducer = (state=[], action) => {
 }
 const reviewReducer = (state =[], action)=>{
     console.log(state);
-    
+
     
 }
 
@@ -63,6 +63,7 @@ const storeInstance = createStore(
        pageTwoReducer,
        pageThreeReducer,
        pageFourReducer,
+       reviewReducer
     }),
   applyMiddleware(logger)
 

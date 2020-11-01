@@ -29,7 +29,7 @@ state = {
         return(
             <>
             <h2>How are you feeling today?</h2>
-            <form >
+            <form>
                 <input type="number" onChange={(event) => this.handleChange(event)} placeholder="1-10"/>
             </form>
                 <button onClick={this.nextPage}>Next</button>
