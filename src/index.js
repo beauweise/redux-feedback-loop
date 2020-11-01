@@ -6,14 +6,14 @@ import registerServiceWorker from './registerServiceWorker';
 import { Provider } from 'react-redux';
 import { createStore, combineReducers } from'redux';
 
-pageOneReducer = (state=[], action)=>{
+// pageOneReducer = (state=[], action)=>{
 
-}
+// }
 
 
 const storeInstance = createStore(
     combineReducers({
-       pageOneReducer,
+    //    pageOneReducer,
     })
 );
 ReactDOM.render(<Provider store={storeInstance}> <App /> </Provider>, document.getElementById('root'));

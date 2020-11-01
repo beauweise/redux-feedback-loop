@@ -10,17 +10,19 @@ class PageFour extends Component {
         // this will happen this weekend
         this.props.history.push('/ReviewFeedback');
     }
+    handleChange = ()=>{
+        console.log('input page 4');
+        
+    }
 
     render(){ 
         return(
             <>
             <h2>Any comments you want to leave?</h2>
                 <p></p>
-                <ul>
-                    {/* {this.props.reduxState.pizzaMenu.map((item) => { */}
-                        {/* return <li key={item.id}><MenuItem item={item} /> </li>
-                    })}  */}
-                </ul>
+                <form >
+                <input type="text" onChange={(event) => this.handleChange(event, "customer_name")} placeholder="Comment"/>
+            </form>
                 <button onClick={this.nextPage}>Next</button>
             </>
         )

@@ -10,16 +10,18 @@ class PageThree extends Component {
         // this will happen this weekend
         this.props.history.push('/PageFour');
     }
+    handleChange = ()=>{
+        console.log('input page 3');
+        
+    }
 
     render(){ 
         return(
             <>
             <h2>How well are you being supported?</h2>
-                <ul>
-                    {/* {this.props.reduxState.pizzaMenu.map((item) => { */}
-                        {/* return <li key={item.id}><MenuItem item={item} /> </li>
-                    })}  */}
-                </ul>
+            <form >
+                <input type="number" onChange={(event) => this.handleChange(event, "customer_name")} placeholder="1-10"/>
+            </form>
                 <button onClick={this.nextPage}>Next</button>
             </>
         )

@@ -4,18 +4,19 @@ import '../App/App.css';
 
 class ReviewFeedback extends Component {
 
-
+    handleSubmit = () => {
+        console.log('handle Submit Feedback');
+        
+    }
 
     render(){ 
         return(
             <>
             <h2>Review your Feedback</h2>
                 <p></p>
-                <ul>
-                    {/* {this.props.reduxState.pizzaMenu.map((item) => { */}
-                        {/* return <li key={item.id}><MenuItem item={item} /> </li>
-                    })}  */}
-                </ul>
+                <form onSubmit = {this.handleSubmit}>
+                    
+                </form>
                 <button onClick={this.nextPage}>Next</button>
             </>
         )
