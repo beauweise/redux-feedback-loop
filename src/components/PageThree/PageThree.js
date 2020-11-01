@@ -20,7 +20,7 @@ class PageThree extends Component {
             <>
             <h2>How well are you being supported?</h2>
             <form >
-                <input type="number" onChange={(event) => this.handleChange(event, "customer_name")} placeholder="1-10"/>
+                <input type="number" onChange={(event) => this.handleChange(event)} placeholder="1-10"/>
             </form>
                 <button onClick={this.nextPage}>Next</button>
             </>

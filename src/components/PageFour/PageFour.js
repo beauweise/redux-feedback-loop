@@ -21,7 +21,7 @@ class PageFour extends Component {
             <h2>Any comments you want to leave?</h2>
                 <p></p>
                 <form >
-                <input type="text" onChange={(event) => this.handleChange(event, "customer_name")} placeholder="Comment"/>
+                <input type="text" onChange={(event) => this.handleChange(event)} placeholder="Comment"/>
             </form>
                 <button onClick={this.nextPage}>Next</button>
             </>

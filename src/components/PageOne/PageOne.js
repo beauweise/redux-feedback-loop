@@ -19,7 +19,7 @@ class PageOne extends Component {
             <>
             <h2>How are you feeling today?</h2>
             <form >
-                <input type="number" onChange={(event) => this.handleChange(event, "customer_name")} placeholder="1-10"/>
+                <input type="number" onChange={(event) => this.handleChange(event)} placeholder="1-10"/>
             </form>
                 <button onClick={this.nextPage}>Next</button>
             </>
