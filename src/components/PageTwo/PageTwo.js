@@ -12,7 +12,7 @@ class PageTwo extends Component {
         if (this.state.understanding === "" || this.state.understanding === null) {// not allowing for empty inputs
             alert('Please enter all info');
             return;
-        } else if(this.state.feeling >10 || this.state.feeling < 1){
+        } else if (this.state.feeling > 10 || this.state.feeling < 1) {
             alert('Please enter a number 1-10');
             return;
         }

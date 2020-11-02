@@ -11,21 +11,21 @@ const pool = require('../modules/pool');
 //         res.sendStatus(500);
 //     });
 // })
-router.post('/',  (req, res) => {
+router.post('/', (req, res) => {
     let newFeedback = req.body;
     console.log(`Adding book`, newFeedback);
-  
+
     let queryText = `INSERT INTO "feedback" ("feeling", "understanding","support","comments")
                      VALUES ($1, $2, $3, $4);`;
     pool.query(queryText, [newFeedback.feeling, newFeedback.understanding,
-                           newFeedback.support,newFeedback.comments])
-      .then(result => {
-        res.sendStatus(201);
-      })
-      .catch(error => {
-        console.log(`Error adding new Feedback`, error);
-        res.sendStatus(500);
-      });
-  });
+    newFeedback.support, newFeedback.comments])
+        .then(result => {
+            res.sendStatus(201);
+        })
+        .catch(error => {
+            console.log(`Error adding new Feedback`, error);
+            res.sendStatus(500);
+        });
+});
 
 module.exports = router;

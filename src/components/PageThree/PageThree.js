@@ -12,14 +12,13 @@ class PageThree extends Component {
         if (this.state.support === "" || this.state.support === null) {// not allowing for empty inputs
             alert('Please enter all info');
             return;
-        } else if(this.state.feeling >10 || this.state.feeling < 1){
+        } else if (this.state.feeling > 10 || this.state.feeling < 1) {
             alert('Please enter a number 1-10');
             return;
         }
         else {
             this.props.history.push('/PageFour');
             this.props.dispatch({ type: 'SET_SUPPORT', payload: this.state.support });
-
         }
     }
     handleChange = (event) => {

@@ -6,18 +6,17 @@ class PageOne extends Component {
 
     nextPage = () => {
         console.log('check');
-        // this will happen this weekend
         this.props.history.push('/');
     }
 
-    render(){ 
-        return(
+    render() {
+        return (
             <>
-            <h2>Thank you!</h2>
-            <div>
-                 <button onClick={this.nextPage}>Leave New Feedback</button>
-            </div>
-               
+                <h2>Thank you!</h2>
+                <div>
+                    <button onClick={this.nextPage}>Leave New Feedback</button>
+                </div>
+
             </>
         )
     }
