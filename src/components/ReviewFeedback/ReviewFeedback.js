@@ -7,19 +7,14 @@ class ReviewFeedback extends Component {
     
     nextPage = () => {
         console.log('review Feedback');
-        
-        this.props.dispatch({type: 'SET_FEEDBACK', payload: [this.props.reduxState.feeling,
-            this.props.reduxState.understanding,this.props.reduxState.support,
-            this.props.reduxState.comments]});
-        
     axios({
         method: 'Post',
-        url:'/'
+        url:'/',
         data:{
-            this.props.reduxState.feelingReducer,
-            this.props.reduxState.understandingReducer,
-            this.props.reduxState.supportReducer,
-            this.props.reduxState.commentsReducer
+            feeling:this.props.reduxState.feelingReducer,
+            understanding:this.props.reduxState.understandingReducer,
+            support:this.props.reduxState.supportReducer,
+            comments:this.props.reduxState.commentsReducer
         }
     }).then((response)=>{
         console.log(response.data);
@@ -27,7 +22,7 @@ class ReviewFeedback extends Component {
         console.log(error);
       });
 
-      this.props.history.push('/SubmitFeedback');
+      this.props.history.push('/LeaveNewFeedback');
     }
      
     
@@ -38,10 +33,10 @@ class ReviewFeedback extends Component {
             <>
                 <h2>Review your Feedback</h2>
                 <ul className='ReviewFeedback'>
-                    <li>{this.props.reduxState.feelingReducer}</li>
-                    <li>{this.props.reduxState.understandingReducer}</li>
-                    <li>{this.props.reduxState.supportReducer}</li>
-                    <li>{this.props.reduxState.commentsReducer}</li>
+                    <li>Feelings: {this.props.reduxState.feelingReducer}</li>
+                    <li>Understanding: {this.props.reduxState.understandingReducer}</li>
+                    <li>Support: {this.props.reduxState.supportReducer}</li>
+                    <li>Comments: {this.props.reduxState.commentsReducer}</li>
                 </ul>
 
 

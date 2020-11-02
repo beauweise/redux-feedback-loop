@@ -10,7 +10,7 @@ import logger from 'redux-logger';
 
 
 const feelingReducer = (state=0, action) => {
-    console.log(action.payload);
+    console.log(state);
     
     switch(action.type){
         case 'SET_FEELING':
@@ -20,7 +20,7 @@ const feelingReducer = (state=0, action) => {
       }
 }
 const understandingReducer = (state=[], action) => {
-    console.log(action.payload);
+    console.log(state);
 
     switch(action.type){
         case 'SET_UNDERSTANDING':
@@ -30,7 +30,7 @@ const understandingReducer = (state=[], action) => {
       }
 }
 const supportReducer = (state=[], action) => {
-    console.log(action.payload);
+    console.log(state);
 
     switch(action.type){
         case 'SET_SUPPORT':
@@ -40,7 +40,7 @@ const supportReducer = (state=[], action) => {
       }
 }
 const commentsReducer = (state=[], action) => {
-    console.log(action.payload);
+    console.log(state);
 
     switch(action.type){
         case 'SET_COMMENTS':
